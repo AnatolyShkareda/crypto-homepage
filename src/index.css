@@ -95,17 +95,41 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Enhanced typography for better readability */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  p {
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  /* High contrast text for accessibility */
+  .text-high-contrast {
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  }
+
+  .text-medium-contrast {
+    color: #e2e8f0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   }
 }
 
 @layer utilities {
   /* Enhanced Cyber Cityscape Background */
   .cyber-cityscape {
-    background: linear-gradient(135deg, #1a0033 0%, #2d1b69 25%, #8b5cf6 50%, #a855f7 75%, #ec4899 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 25%, #581c87 50%, #7c3aed 75%, #a21caf 100%);
     position: relative;
   }
 
@@ -116,15 +140,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(168, 85, 247, 0.2) 0%, transparent 50%);
-    animation: shimmerGlow 4s ease-in-out infinite alternate;
+    background: radial-gradient(circle at 20% 50%, rgba(34, 211, 238, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%);
+    animation: shimmerGlow 6s ease-in-out infinite alternate;
   }
 
   .cyber-tower {
     position: relative;
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
   }
 
   .cyber-tower::before {
@@ -134,51 +158,75 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, transparent 0%, rgba(96, 165, 250, 0.3) 100%);
-    animation: energyFlow 3s ease-in-out infinite;
+    background: linear-gradient(180deg, transparent 0%, rgba(34, 211, 238, 0.4) 100%);
+    animation: energyFlow 4s ease-in-out infinite;
   }
 
   .cyber-grid {
     background-image: 
-      linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+      linear-gradient(rgba(34, 211, 238, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
-    animation: gridMove 20s linear infinite;
+    animation: gridMove 25s linear infinite;
   }
 
   .text-shadow-glow {
-    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
+    text-shadow: 0 0 20px rgba(34, 211, 238, 0.6), 0 0 40px rgba(168, 85, 247, 0.4);
   }
 
   .animate-spin-slow {
-    animation: spin 8s linear infinite;
+    animation: spin 12s linear infinite;
   }
 
-  /* Enhanced Cyber Effects */
+  /* Enhanced Cyber Effects for better UX */
   .cyber-border {
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+    border: 2px solid rgba(34, 211, 238, 0.3);
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+    transition: all 0.3s ease;
   }
 
   .cyber-border:hover {
-    border-color: rgba(34, 211, 238, 0.5);
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+    border-color: rgba(34, 211, 238, 0.6);
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.4);
   }
 
   .cyber-glow {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.3);
+    transition: all 0.3s ease;
   }
 
   .cyber-glow:hover {
-    box-shadow: 0 0 40px rgba(34, 211, 238, 0.4);
+    box-shadow: 0 0 50px rgba(34, 211, 238, 0.5);
   }
 
   .neon-text {
     text-shadow: 
-      0 0 5px rgba(34, 211, 238, 0.8),
-      0 0 10px rgba(34, 211, 238, 0.6),
-      0 0 15px rgba(34, 211, 238, 0.4),
-      0 0 20px rgba(34, 211, 238, 0.2);
+      0 0 5px rgba(34, 211, 238, 0.9),
+      0 0 10px rgba(34, 211, 238, 0.7),
+      0 0 15px rgba(34, 211, 238, 0.5),
+      0 0 20px rgba(34, 211, 238, 0.3);
+  }
+
+  /* Enhanced interactive states */
+  .enhanced-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .enhanced-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .enhanced-button:hover::before {
+    left: 100%;
   }
 
   /* Existing utilities */
@@ -211,7 +259,7 @@
   .animate-in > *:nth-child(6) { animation-delay: 0.6s; }
 
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black;
+    @apply focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900;
   }
 
   ::selection {
@@ -220,29 +268,45 @@
   }
 
   .hover-lift {
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   }
 
   .hover-lift:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(34, 211, 238, 0.3);
+  }
+
+  /* Enhanced readability utilities */
+  .text-readable {
+    color: #f8fafc;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  .text-readable-heading {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
   }
 }
 
-/* Enhanced Animations for Cyber Theme */
+/* Enhanced Animations for better UX */
 @keyframes shimmerGlow {
-  0% { opacity: 0.8; }
-  100% { opacity: 1; }
+  0% { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.02); }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-15px); }
 }
 
 @keyframes energyFlow {
   0% { opacity: 0.3; transform: translateY(100%); }
-  50% { opacity: 0.8; transform: translateY(50%); }
+  50% { opacity: 0.9; transform: translateY(50%); }
   100% { opacity: 0.3; transform: translateY(0%); }
 }
 
@@ -287,7 +351,7 @@
     box-shadow: 0 0 5px rgba(34, 211, 238, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.7), 0 0 35px rgba(168, 85, 247, 0.5);
   }
 }
 
@@ -298,9 +362,10 @@
 }
 
 .cyber-pulse {
-  animation: cyberPulse 2s ease-in-out infinite;
+  animation: cyberPulse 3s ease-in-out infinite;
 }
 
+/* Enhanced accessibility */
 @media (prefers-reduced-motion: reduce) {
   .section-animate,
   .animate-in > *,
@@ -315,5 +380,23 @@
   .section-animate {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-white {
+    color: #ffffff !important;
+    text-shadow: 0 0 1px #000000;
+  }
+  
+  .text-slate-200 {
+    color: #f1f5f9 !important;
+    text-shadow: 0 0 1px #000000;
+  }
+  
+  .text-cyan-300 {
+    color: #67e8f9 !important;
+    text-shadow: 0 0 1px #000000;
   }
 }

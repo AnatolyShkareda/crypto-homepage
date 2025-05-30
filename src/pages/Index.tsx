@@ -1,4 +1,3 @@
-
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
@@ -80,9 +79,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
-      <nav className="border-b border-purple-500/30 bg-black/40 backdrop-blur-md sticky top-0 z-50 shadow-lg shadow-purple-500/20">
+      <nav className="border-b border-cyan-500/20 bg-slate-900/90 backdrop-blur-xl sticky top-0 z-50 shadow-2xl shadow-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
@@ -92,27 +91,27 @@ const Index = () => {
                 className="h-10 transition-transform hover:scale-105 filter drop-shadow-lg"
               />
             </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-200 hover:text-cyan-400 transition-colors font-medium text-lg focus-ring relative group">
-                Products
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <div className="hidden md:flex items-center space-x-10">
+              <a href="#features" className="text-slate-100 hover:text-cyan-300 transition-all duration-300 font-medium text-lg focus-ring relative group py-2">
+                <span className="relative z-10">Products</span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
               </a>
-              <a href="#about" className="text-gray-200 hover:text-cyan-400 transition-colors font-medium text-lg focus-ring relative group">
-                About
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+              <a href="#about" className="text-slate-100 hover:text-cyan-300 transition-all duration-300 font-medium text-lg focus-ring relative group py-2">
+                <span className="relative z-10">About</span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
               </a>
-              <a href="#contact" className="text-gray-200 hover:text-cyan-400 transition-colors font-medium text-lg focus-ring relative group">
-                Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+              <a href="#contact" className="text-slate-100 hover:text-cyan-300 transition-all duration-300 font-medium text-lg focus-ring relative group py-2">
+                <span className="relative z-10">Contact</span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
               </a>
-              <Button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold shadow-lg hover:shadow-xl shadow-purple-500/30 transition-all duration-200 transform hover:-translate-y-0.5 text-lg px-6 py-3 border border-cyan-400/30">
-                Book a call
-                <ArrowRight className="ml-2 w-4 h-4" />
+              <Button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold shadow-xl hover:shadow-2xl shadow-cyan-500/30 transition-all duration-300 transform hover:-translate-y-1 text-lg px-8 py-3 border border-cyan-400/50 hover:border-cyan-300 hover:scale-105">
+                <span className="relative z-10">Book a call</span>
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <Button variant="ghost" className="p-2 text-gray-200 hover:text-cyan-400 hover:bg-purple-800/50">
+              <Button variant="ghost" className="p-3 text-slate-100 hover:text-cyan-300 hover:bg-purple-800/30 border border-transparent hover:border-cyan-400/30 transition-all duration-300">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -176,20 +175,29 @@ const Index = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-10">
           <div className="text-center max-w-6xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-10 leading-tight tracking-tight text-shadow-glow">
-              We build decentralized platforms at the{" "}
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                intersection
-              </span>{" "}
-              of blockchain and artificial intelligence
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
+              <span className="block mb-2">We build decentralized platforms</span>
+              <span className="block mb-2">at the{" "}
+                <span className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent font-extrabold">
+                  intersection
+                </span>
+              </span>
+              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 text-slate-200">
+                of blockchain and artificial intelligence
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
-              AI that works for Web3. Building the future of decentralized intelligence.
-            </p>
+            <div className="max-w-4xl mx-auto mb-12">
+              <p className="text-xl md:text-2xl lg:text-3xl text-slate-200 leading-relaxed font-light tracking-wide">
+                AI that works for Web3.{" "}
+                <span className="text-cyan-300 font-medium">Building the future</span>{" "}
+                of decentralized intelligence.
+              </p>
+            </div>
             <div className="flex justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold text-xl px-10 py-6 shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1 hover-lift border border-cyan-400/30">
-                Book a call
-                <ArrowRight className="ml-2 w-6 h-6" />
+              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold text-xl px-12 py-6 shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 border-2 border-cyan-400/50 hover:border-cyan-300 group">
+                <span className="relative z-10">Book a call</span>
+                <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-500/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </div>
           </div>
@@ -200,7 +208,7 @@ const Index = () => {
       <section 
         id="features" 
         ref={featuresRef}
-        className="section-animate py-24 lg:py-40 bg-gradient-to-br from-black via-purple-900/50 to-black relative overflow-hidden"
+        className="section-animate py-24 lg:py-40 bg-gradient-to-br from-slate-900 via-purple-900/60 to-slate-900 relative overflow-hidden"
       >
         {/* Background Effects */}
         <div className="absolute inset-0">
@@ -213,12 +221,21 @@ const Index = () => {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight text-shadow-glow">
-              Decentralized AI Solutions
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight">
+              <span className="bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+                Decentralized AI
+              </span>
+              <span className="block text-slate-200 mt-2">Solutions</span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
-              Revolutionary products that merge artificial intelligence with blockchain technology to create the next generation of decentralized applications.
-            </p>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light tracking-wide">
+                Revolutionary products that merge{" "}
+                <span className="text-cyan-300 font-medium">artificial intelligence</span>{" "}
+                with{" "}
+                <span className="text-purple-300 font-medium">blockchain technology</span>{" "}
+                to create the next generation of decentralized applications.
+              </p>
+            </div>
           </div>
           
           <FeatureCarousel features={features} />
@@ -228,7 +245,7 @@ const Index = () => {
       {/* CTA Section */}
       <section 
         ref={ctaRef}
-        className="section-animate py-24 lg:py-40 bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 relative overflow-hidden"
+        className="section-animate py-24 lg:py-40 bg-gradient-to-r from-purple-900 via-slate-900 to-purple-900 relative overflow-hidden"
       >
         {/* Background Effects */}
         <div className="absolute inset-0">
@@ -239,17 +256,26 @@ const Index = () => {
           <div className="absolute top-1/2 right-10 w-2 h-64 bg-gradient-to-b from-pink-500/30 to-transparent animate-pulse"></div>
         </div>
 
-        <div className="relative max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 z-10">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-10 tracking-tight text-shadow-glow">
-            Ready to Build the Future?
+        <div className="relative max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8 z-10">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-10 tracking-tight leading-tight">
+            <span className="block mb-2">Ready to Build</span>
+            <span className="bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+              the Future?
+            </span>
           </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-16 max-w-3xl mx-auto leading-relaxed font-light">
-            Join the community shaping the next wave of decentralized AI. Start building today.
-          </p>
+          <div className="max-w-4xl mx-auto mb-16">
+            <p className="text-xl md:text-2xl lg:text-3xl text-slate-200 leading-relaxed font-light tracking-wide">
+              Join the community shaping the{" "}
+              <span className="text-cyan-300 font-medium">next wave</span>{" "}
+              of decentralized AI.{" "}
+              <span className="text-purple-300 font-medium">Start building today.</span>
+            </p>
+          </div>
           <div className="flex justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-xl px-10 py-6 font-semibold shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1 hover-lift border border-cyan-400/30">
-              Book a call
-              <ArrowRight className="ml-2 w-6 h-6" />
+            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white text-xl px-12 py-6 font-bold shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 border-2 border-cyan-400/50 hover:border-cyan-300 group">
+              <span className="relative z-10">Book a call</span>
+              <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-500/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </div>
         </div>
@@ -258,7 +284,7 @@ const Index = () => {
       {/* Footer */}
       <footer 
         ref={footerRef}
-        className="section-animate bg-gradient-to-br from-black via-purple-900 to-black py-20 border-t border-purple-500/30 relative overflow-hidden"
+        className="section-animate bg-gradient-to-br from-slate-900 via-purple-900/40 to-slate-900 py-20 border-t border-cyan-500/20 relative overflow-hidden"
       >
         {/* Background Effects */}
         <div className="absolute inset-0">
@@ -272,26 +298,26 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/34fb2bfb-ee4f-4206-88a1-ea5b346224c7.png" 
                 alt="WeAreWay" 
-                className="h-8 transition-transform hover:scale-105 filter drop-shadow-lg"
+                className="h-10 transition-transform hover:scale-105 filter drop-shadow-lg"
               />
             </div>
-            <div className="flex items-center space-x-8 text-gray-300">
-              <a href="#" className="hover:text-cyan-400 transition-colors font-medium relative group">
-                Privacy Policy
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <div className="flex items-center space-x-8 text-slate-300">
+              <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
+                <span className="relative z-10">Privacy Policy</span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
               </a>
-              <a href="#" className="hover:text-cyan-400 transition-colors font-medium relative group">
-                Terms of Service
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+              <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
+                <span className="relative z-10">Terms of Service</span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
               </a>
-              <a href="#" className="hover:text-cyan-400 transition-colors font-medium relative group">
-                Support
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+              <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
+                <span className="relative z-10">Support</span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
               </a>
             </div>
           </div>
-          <div className="border-t border-purple-500/30 pt-8 text-center">
-            <p className="text-gray-400 font-light leading-relaxed">
+          <div className="border-t border-cyan-500/20 pt-8 text-center">
+            <p className="text-slate-400 font-light leading-relaxed text-lg tracking-wide">
               &copy; 2024 WeAreWay. Building the future of decentralized artificial intelligence.
             </p>
           </div>
