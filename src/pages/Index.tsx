@@ -1,4 +1,3 @@
-
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
@@ -84,20 +83,20 @@ const Index = () => {
       {/* Navigation */}
       <nav className="border-b border-gray-100 bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
               <img 
                 src="/lovable-uploads/34fb2bfb-ee4f-4206-88a1-ea5b346224c7.png" 
                 alt="WeAreWay" 
-                className="h-8 transition-transform hover:scale-105"
+                className="h-10 transition-transform hover:scale-105"
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Products</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">About</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</a>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5">
-                Get Started
+              <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg focus-ring">Products</a>
+              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg focus-ring">About</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg focus-ring">Contact</a>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 text-lg px-6 py-3">
+                Book a call
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
@@ -131,24 +130,24 @@ const Index = () => {
           </div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 z-10">
-          <div className="text-center max-w-5xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-10">
+          <div className="text-center max-w-6xl mx-auto">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-10 leading-tight tracking-tight">
               We build decentralized platforms at the{" "}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
                 intersection
               </span>{" "}
               of blockchain and artificial intelligence
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
               AI that works for Web3. Building the future of decentralized intelligence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-4 shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1">
-                Explore Products
-                <ArrowRight className="ml-2 w-5 h-5" />
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xl px-10 py-6 shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1 hover-lift">
+                Book a call
+                <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 font-semibold text-lg px-8 py-4 transition-all duration-200 hover:bg-blue-50">
+              <Button variant="outline" size="lg" className="border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 font-semibold text-xl px-10 py-6 transition-all duration-200 hover:bg-blue-50 hover-lift">
                 View Documentation
               </Button>
             </div>
@@ -165,7 +164,7 @@ const Index = () => {
       <section 
         id="features" 
         ref={featuresRef}
-        className="section-animate py-20 lg:py-32 bg-white"
+        className="section-animate py-24 lg:py-40 bg-white"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -184,24 +183,24 @@ const Index = () => {
       {/* CTA Section */}
       <section 
         ref={ctaRef}
-        className="section-animate py-20 lg:py-32 bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 relative overflow-hidden"
+        className="section-animate py-24 lg:py-40 bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight">
+        <div className="relative max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-10 tracking-tight">
             Ready to Build the Future?
           </h2>
-          <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-xl md:text-2xl lg:text-3xl text-blue-100 mb-16 max-w-3xl mx-auto leading-relaxed font-light">
             Join the community shaping the next wave of decentralized AI. Start building today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 font-semibold shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1">
-              <ExternalLink className="mr-2 w-5 h-5" />
-              Explore Developer Docs
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50 text-xl px-10 py-6 font-semibold shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1 hover-lift">
+              <ExternalLink className="mr-2 w-6 h-6" />
+              Book a call
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4 font-semibold transition-all duration-200 hover:shadow-xl">
-              <Users className="mr-2 w-5 h-5" />
-              Contact Our Team
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-xl px-10 py-6 font-semibold transition-all duration-200 hover:shadow-xl hover-lift">
+              <Users className="mr-2 w-6 h-6" />
+              Book a call
             </Button>
           </div>
         </div>
@@ -210,7 +209,7 @@ const Index = () => {
       {/* Footer */}
       <footer 
         ref={footerRef}
-        className="section-animate bg-gray-50 py-16 border-t border-gray-200"
+        className="section-animate bg-gray-50 py-20 border-t border-gray-200"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
