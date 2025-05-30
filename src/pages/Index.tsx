@@ -1,47 +1,46 @@
-
-import { ArrowRight, Brain, Database, Palette, Shield, MessageSquare, Bot, Users, ExternalLink } from "lucide-react";
+import { ArrowRight, Brain, ExternalLink, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import FeatureCarousel from "@/components/FeatureCarousel";
 
 const Index = () => {
   const features = [
     {
-      icon: Brain,
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=64&h=64&fit=crop&crop=center",
       title: "Train AI Models. Share Compute. Earn.",
       subtitle: "Decentralized AI Training Platforms",
       description: "Contribute data or GPU power to train AI collaboratively. Get rewarded in tokens — no central authority, just global intelligence.",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Database,
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=64&h=64&fit=crop&crop=center",
       title: "Monetize Your Data. Fuel Smarter AI.",
       subtitle: "Decentralized Data Marketplaces",
       description: "Control your data. Sell it securely to AI developers and companies, ensuring privacy and fair compensation.",
       gradient: "from-indigo-500 to-blue-500"
     },
     {
-      icon: Palette,
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=64&h=64&fit=crop&crop=center",
       title: "Create. Mint. Trade.",
       subtitle: "AI-Generated NFTs",
       description: "Turn AI-generated art, music, or characters into NFTs in seconds. Tokenize creativity and build interactive, intelligent collectibles.",
       gradient: "from-purple-500 to-indigo-500"
     },
     {
-      icon: Shield,
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=64&h=64&fit=crop&crop=center",
       title: "Compliant by Design",
       subtitle: "AI-Powered KYC on Blockchain",
       description: "Automated identity verification with on-chain audit logs. Built for DeFi, exchanges, and Web3 platforms needing scalable, regulatory-grade KYC.",
       gradient: "from-blue-600 to-blue-500"
     },
     {
-      icon: MessageSquare,
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=64&h=64&fit=crop&crop=center",
       title: "Web3 Access to Language Models",
       subtitle: "Decentralized LLM Services",
       description: "Tap into powerful LLMs without registration. Integrate via API, pay in ETH or USDC, and launch custom AI agents directly on-chain.",
       gradient: "from-cyan-500 to-blue-500"
     },
     {
-      icon: Bot,
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=64&h=64&fit=crop&crop=center",
       title: "Intelligent Agents for the Autonomous Web",
       subtitle: "AI Agents in Web3 Ecosystems",
       description: "Deploy bots that trade, govern, and interact autonomously with smart contracts and DAOs — redefining on-chain automation.",
@@ -124,35 +123,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-1"
-              >
-                <CardHeader className="pb-4">
-                  <div className="flex items-center space-x-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                      <feature.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl text-gray-900 group-hover:text-blue-600 transition-colors">
-                        {feature.title}
-                      </CardTitle>
-                      <CardDescription className="text-blue-600 font-medium">
-                        {feature.subtitle}
-                      </CardDescription>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <FeatureCarousel features={features} />
         </div>
       </section>
 
