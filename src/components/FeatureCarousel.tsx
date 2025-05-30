@@ -28,17 +28,17 @@ const FeatureCarousel = ({ features }: FeatureCarouselProps) => {
           className="relative"
         >
           <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-1">
-            <CardHeader className="pb-4">
-              <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+            <CardHeader className="pb-6">
+              <div className="flex items-center space-x-6">
+                <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
                   {hoveredIndex === index ? (
                     <Carousel className="w-full h-full">
                       <CarouselContent>
                         {features.map((_, imgIndex) => (
                           <CarouselItem key={imgIndex}>
-                            <div className="w-16 h-16">
+                            <div className="w-24 h-24">
                               <img
-                                src={`https://images.unsplash.com/photo-151877066043${9 + imgIndex}-4636190af475?w=64&h=64&fit=crop&crop=center`}
+                                src={`https://images.unsplash.com/photo-151877066043${9 + imgIndex}-4636190af475?w=96&h=96&fit=crop&crop=center`}
                                 alt={`Feature ${imgIndex + 1}`}
                                 className="w-full h-full object-cover rounded-xl"
                               />
@@ -57,18 +57,18 @@ const FeatureCarousel = ({ features }: FeatureCarouselProps) => {
                     />
                   )}
                 </div>
-                <div>
-                  <CardTitle className="text-xl text-gray-900 group-hover:text-blue-600 transition-colors">
+                <div className="flex-1">
+                  <CardTitle className="text-2xl text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                     {feature.title}
                   </CardTitle>
-                  <CardDescription className="text-blue-600 font-medium">
+                  <CardDescription className="text-blue-600 font-medium text-lg">
                     {feature.subtitle}
                   </CardDescription>
                 </div>
               </div>
             </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 leading-relaxed">
+            <CardContent className="pt-0">
+              <p className="text-gray-600 leading-relaxed text-lg">
                 {feature.description}
               </p>
             </CardContent>
