@@ -55,10 +55,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">DecentralAI</span>
+              <img 
+                src="/lovable-uploads/34fb2bfb-ee4f-4206-88a1-ea5b346224c7.png" 
+                alt="WeAreWay" 
+                className="h-8"
+              />
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">Products</a>
@@ -146,10 +147,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">DecentralAI</span>
+              <img 
+                src="/lovable-uploads/34fb2bfb-ee4f-4206-88a1-ea5b346224c7.png" 
+                alt="WeAreWay" 
+                className="h-8"
+              />
             </div>
             <div className="flex items-center space-x-6 text-gray-600">
               <a href="#" className="hover:text-blue-600 transition-colors">Privacy</a>
@@ -158,7 +160,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500">
-            <p>&copy; 2024 DecentralAI. Building the future of decentralized artificial intelligence.</p>
+            <p>&copy; 2024 WeAreWay. Building the future of decentralized artificial intelligence.</p>
           </div>
         </div>
       </footer>
