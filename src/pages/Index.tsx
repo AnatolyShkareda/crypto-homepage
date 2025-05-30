@@ -1,9 +1,38 @@
-
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
+import { useEffect, useRef } from "react";
 
 const Index = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const featuresRef = useRef<HTMLElement>(null);
+  const ctaRef = useRef<HTMLElement>(null);
+  const footerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    const elements = [heroRef.current, featuresRef.current, ctaRef.current, footerRef.current];
+    elements.forEach((el) => {
+      if (el) {
+        observer.observe(el);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const features = [
     {
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=64&h=64&fit=crop&crop=center",
@@ -76,7 +105,10 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+      <section 
+        ref={heroRef}
+        className="section-animate relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50"
+      >
         <div className="absolute inset-0 bg-grid-blue-500/[0.02] bg-[size:50px_50px]" />
         
         {/* Moving Robot Background */}
@@ -103,7 +135,7 @@ const Index = () => {
               AI that works for Web3.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Explore Products
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -118,7 +150,11 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-white">
+      <section 
+        id="features" 
+        ref={featuresRef}
+        className="section-animate py-24 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -134,7 +170,10 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
+      <section 
+        ref={ctaRef}
+        className="section-animate py-24 bg-gradient-to-r from-blue-600 to-cyan-600"
+      >
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Build?
@@ -156,7 +195,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-50 py-12">
+      <footer 
+        ref={footerRef}
+        className="section-animate bg-gray-50 py-12"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
