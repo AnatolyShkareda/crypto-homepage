@@ -142,13 +142,10 @@ const Index = () => {
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
               AI that works for Web3. Building the future of decentralized intelligence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+            <div className="flex justify-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xl px-10 py-6 shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1 hover-lift">
                 Book a call
                 <ArrowRight className="ml-2 w-6 h-6" />
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 font-semibold text-xl px-10 py-6 transition-all duration-200 hover:bg-blue-50 hover-lift">
-                View Documentation
               </Button>
             </div>
           </div>
@@ -193,14 +190,10 @@ const Index = () => {
           <p className="text-xl md:text-2xl lg:text-3xl text-blue-100 mb-16 max-w-3xl mx-auto leading-relaxed font-light">
             Join the community shaping the next wave of decentralized AI. Start building today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+          <div className="flex justify-center">
             <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50 text-xl px-10 py-6 font-semibold shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1 hover-lift">
-              <ExternalLink className="mr-2 w-6 h-6" />
               Book a call
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-xl px-10 py-6 font-semibold transition-all duration-200 hover:shadow-xl hover-lift">
-              <Users className="mr-2 w-6 h-6" />
-              Book a call
+              <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
           </div>
         </div>
