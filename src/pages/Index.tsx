@@ -1,4 +1,5 @@
-import { ArrowRight, Brain, ExternalLink, Users } from "lucide-react";
+
+import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
 
@@ -77,7 +78,16 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50">
         <div className="absolute inset-0 bg-grid-blue-500/[0.02] bg-[size:50px_50px]" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        
+        {/* Moving Robot Background */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Bot className="w-96 h-96 text-blue-300/20 animate-pulse" />
+          <div className="absolute w-80 h-80 animate-spin" style={{ animationDuration: '20s' }}>
+            <Bot className="w-full h-full text-cyan-300/10" />
+          </div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               We build decentralized platforms at the{" "}
