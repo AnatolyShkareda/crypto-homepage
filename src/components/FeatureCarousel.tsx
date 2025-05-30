@@ -58,17 +58,17 @@ const FeatureCarousel = ({ features }: FeatureCarouselProps) => {
                   )}
                 </div>
                 <div className="flex-1">
-                  <CardTitle className="text-2xl text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+                  <CardTitle className="text-3xl text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
                     {feature.title}
                   </CardTitle>
-                  <CardDescription className="text-blue-600 font-medium text-lg">
+                  <CardDescription className="text-blue-600 font-medium text-xl">
                     {feature.subtitle}
                   </CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="pt-0">
-              <p className="text-gray-600 leading-relaxed text-lg">
+              <p className="text-gray-600 leading-relaxed text-xl">
                 {feature.description}
               </p>
             </CardContent>
