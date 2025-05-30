@@ -90,16 +90,12 @@ const Index = () => {
               of blockchain and artificial intelligence
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Designed for transparency, collaboration, and permissionless innovation.
+              AI that works for Web3.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8">
                 Explore Products
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 text-lg px-8">
-                View Documentation
-                <ExternalLink className="ml-2 w-5 h-5" />
               </Button>
             </div>
           </div>
