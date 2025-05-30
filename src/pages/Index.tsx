@@ -80,10 +80,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-grid-blue-500/[0.02] bg-[size:50px_50px]" />
         
         {/* Moving Robot Background */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Bot className="w-96 h-96 text-blue-300/20 animate-pulse" />
+        <div className="absolute inset-0 flex items-center justify-center z-0">
+          <Bot className="w-96 h-96 text-blue-400/30 animate-pulse" />
           <div className="absolute w-80 h-80 animate-spin" style={{ animationDuration: '20s' }}>
-            <Bot className="w-full h-full text-cyan-300/10" />
+            <Bot className="w-full h-full text-cyan-400/25" />
+          </div>
+          <div className="absolute w-72 h-72 animate-bounce" style={{ animationDuration: '3s' }}>
+            <Bot className="w-full h-full text-indigo-400/20" />
           </div>
         </div>
         
