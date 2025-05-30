@@ -1,3 +1,4 @@
+
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
@@ -112,49 +113,78 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section with Animated Cityscape Background */}
       <section 
         ref={heroRef}
-        className="section-animate relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50 min-h-[90vh] flex items-center"
+        className="section-animate relative overflow-hidden min-h-[90vh] flex items-center cyber-cityscape"
       >
-        <div className="absolute inset-0 bg-grid-blue-500/[0.02] bg-[size:50px_50px]" />
-        
-        {/* Moving Robot Background */}
-        <div className="absolute inset-0 flex items-center justify-center z-0">
-          <Bot className="w-96 h-96 text-blue-400/30 animate-pulse" />
-          <div className="absolute w-80 h-80 animate-spin" style={{ animationDuration: '20s' }}>
-            <Bot className="w-full h-full text-cyan-400/25" />
+        {/* Animated Cityscape Background */}
+        <div className="absolute inset-0 cyber-bg">
+          {/* Starfield */}
+          <div className="absolute inset-0">
+            {[...Array(50)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${2 + Math.random() * 2}s`
+                }}
+              />
+            ))}
           </div>
-          <div className="absolute w-72 h-72 animate-bounce" style={{ animationDuration: '3s' }}>
-            <Bot className="w-full h-full text-indigo-400/20" />
+
+          {/* Cityscape Buildings */}
+          <div className="absolute bottom-0 left-0 right-0 cityscape">
+            {/* Background Buildings */}
+            <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-t from-purple-900/60 to-transparent transform -skew-x-1"></div>
+            <div className="absolute bottom-0 right-0 w-full h-80 bg-gradient-to-t from-purple-800/50 to-transparent transform skew-x-1"></div>
+            
+            {/* Main Tower */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-96 bg-gradient-to-t from-purple-600 via-purple-500 to-purple-400 cyber-tower">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-20 bg-cyan-400 animate-pulse"></div>
+            </div>
+            
+            {/* Side Buildings */}
+            <div className="absolute bottom-0 left-1/4 w-12 h-64 bg-gradient-to-t from-purple-700 to-purple-600 transform -skew-y-1"></div>
+            <div className="absolute bottom-0 right-1/4 w-10 h-72 bg-gradient-to-t from-purple-800 to-purple-700 transform skew-y-1"></div>
+            <div className="absolute bottom-0 left-1/6 w-8 h-48 bg-gradient-to-t from-purple-900 to-purple-800"></div>
+            <div className="absolute bottom-0 right-1/6 w-14 h-56 bg-gradient-to-t from-purple-700 to-purple-600"></div>
           </div>
+
+          {/* Floating Cyber Elements */}
+          <div className="absolute top-20 left-10 w-20 h-20 border-2 border-cyan-400 rounded-full animate-spin-slow opacity-30">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-cyan-400 rounded-full animate-pulse"></div>
+          </div>
+          <div className="absolute top-40 right-20 w-16 h-16 border border-purple-400 rounded-full animate-bounce opacity-40" style={{ animationDuration: '3s' }}></div>
+          <div className="absolute bottom-20 left-20 w-24 h-24 border-2 border-pink-500 rounded-full animate-pulse opacity-25"></div>
+
+          {/* Grid Lines */}
+          <div className="absolute inset-0 cyber-grid"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-10">
           <div className="text-center max-w-6xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-10 leading-tight tracking-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-10 leading-tight tracking-tight text-shadow-glow">
               We build decentralized platforms at the{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 intersection
               </span>{" "}
               of blockchain and artificial intelligence
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
               AI that works for Web3. Building the future of decentralized intelligence.
             </p>
             <div className="flex justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xl px-10 py-6 shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1 hover-lift">
+              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold text-xl px-10 py-6 shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1 hover-lift border border-cyan-400/30">
                 Book a call
                 <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
             </div>
           </div>
         </div>
-        
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-16 h-16 bg-cyan-200 rounded-full opacity-30 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-20 w-24 h-24 bg-indigo-200 rounded-full opacity-25 animate-pulse delay-500"></div>
       </section>
 
       {/* Features Section */}

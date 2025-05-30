@@ -103,12 +103,63 @@
 }
 
 @layer utilities {
+  /* Cyber Cityscape Background */
+  .cyber-cityscape {
+    background: linear-gradient(135deg, #1a0033 0%, #2d1b69 25%, #8b5cf6 50%, #a855f7 75%, #ec4899 100%);
+    position: relative;
+  }
+
+  .cyber-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(168, 85, 247, 0.2) 0%, transparent 50%);
+    animation: shimmerGlow 4s ease-in-out infinite alternate;
+  }
+
+  .cyber-tower {
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .cyber-tower::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(96, 165, 250, 0.3) 100%);
+    animation: energyFlow 3s ease-in-out infinite;
+  }
+
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+  }
+
+  .text-shadow-glow {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  /* Existing utilities */
   .bg-grid-blue-500\/\[0\.02\] {
     background-image: linear-gradient(to right, rgb(59 130 246 / 0.02) 1px, transparent 1px),
                       linear-gradient(to bottom, rgb(59 130 246 / 0.02) 1px, transparent 1px);
   }
 
-  /* Scroll Animation Styles */
   .section-animate {
     opacity: 0;
     transform: translateY(50px);
@@ -120,7 +171,6 @@
     transform: translateY(0);
   }
 
-  /* Staggered animation for children */
   .animate-in > * {
     animation: slideInUp 0.8s ease-out forwards;
     opacity: 0;
@@ -133,18 +183,15 @@
   .animate-in > *:nth-child(5) { animation-delay: 0.5s; }
   .animate-in > *:nth-child(6) { animation-delay: 0.6s; }
 
-  /* Focus states for accessibility */
   .focus-ring {
     @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
   }
 
-  /* Text selection */
   ::selection {
     background-color: rgb(59 130 246 / 0.2);
     color: rgb(30 58 138);
   }
 
-  /* Smooth hover transitions */
   .hover-lift {
     transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
   }
@@ -155,7 +202,28 @@
   }
 }
 
-/* Enhanced Animations */
+/* Enhanced Animations for Cyber Theme */
+@keyframes shimmerGlow {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes energyFlow {
+  0% { opacity: 0.3; transform: translateY(100%); }
+  50% { opacity: 0.8; transform: translateY(50%); }
+  100% { opacity: 0.3; transform: translateY(0%); }
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
 @keyframes slideInUp {
   from {
     opacity: 0;
@@ -187,17 +255,18 @@
   }
 }
 
-/* Loading shimmer effect */
 .shimmer {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .section-animate,
-  .animate-in > * {
+  .animate-in > *,
+  .cyber-tower,
+  .cyber-grid,
+  .animate-spin-slow {
     animation: none;
     transition: none;
   }
