@@ -103,7 +103,7 @@
 }
 
 @layer utilities {
-  /* Cyber Cityscape Background */
+  /* Enhanced Cyber Cityscape Background */
   .cyber-cityscape {
     background: linear-gradient(135deg, #1a0033 0%, #2d1b69 25%, #8b5cf6 50%, #a855f7 75%, #ec4899 100%);
     position: relative;
@@ -154,6 +154,33 @@
     animation: spin 8s linear infinite;
   }
 
+  /* Enhanced Cyber Effects */
+  .cyber-border {
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+  }
+
+  .cyber-border:hover {
+    border-color: rgba(34, 211, 238, 0.5);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+  }
+
+  .cyber-glow {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+  }
+
+  .cyber-glow:hover {
+    box-shadow: 0 0 40px rgba(34, 211, 238, 0.4);
+  }
+
+  .neon-text {
+    text-shadow: 
+      0 0 5px rgba(34, 211, 238, 0.8),
+      0 0 10px rgba(34, 211, 238, 0.6),
+      0 0 15px rgba(34, 211, 238, 0.4),
+      0 0 20px rgba(34, 211, 238, 0.2);
+  }
+
   /* Existing utilities */
   .bg-grid-blue-500\/\[0\.02\] {
     background-image: linear-gradient(to right, rgb(59 130 246 / 0.02) 1px, transparent 1px),
@@ -184,12 +211,12 @@
   .animate-in > *:nth-child(6) { animation-delay: 0.6s; }
 
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black;
   }
 
   ::selection {
-    background-color: rgb(59 130 246 / 0.2);
-    color: rgb(30 58 138);
+    background-color: rgba(34, 211, 238, 0.3);
+    color: rgb(255, 255, 255);
   }
 
   .hover-lift {
@@ -198,7 +225,7 @@
 
   .hover-lift:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
   }
 }
 
@@ -255,10 +282,23 @@
   }
 }
 
+@keyframes cyberPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(34, 211, 238, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
+  }
+}
+
 .shimmer {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+.cyber-pulse {
+  animation: cyberPulse 2s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -266,7 +306,8 @@
   .animate-in > *,
   .cyber-tower,
   .cyber-grid,
-  .animate-spin-slow {
+  .animate-spin-slow,
+  .cyber-pulse {
     animation: none;
     transition: none;
   }
