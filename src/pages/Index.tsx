@@ -150,14 +150,9 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-10">
           <div className="text-center max-w-6xl mx-auto">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
-              <span className="block mb-2">We build decentralized platforms</span>
-              <span className="block mb-2">where{" "}
-                <span className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent font-extrabold">
-                  blockchain
-                </span>
-              </span>
-              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 text-slate-200">
-                and artificial intelligence converge
+              <span className="block mb-2">Crypto + AI:</span>
+              <span className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent font-extrabold">
+                Discover How They Merge
               </span>
             </h1>
             <div className="max-w-4xl mx-auto mb-12">
