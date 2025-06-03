@@ -85,9 +85,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
-              <div className="text-white font-bold text-xl tracking-wide hover:text-cyan-300 transition-colors duration-300 cursor-pointer">
-                WeAreWay
-              </div>
+              <img 
+                src="/lovable-uploads/d4e80738-4d68-49ef-a793-1aea5f718e28.png" 
+                alt="WeAreWay" 
+                className="h-16 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-90 hover:opacity-100"
+              />
             </div>
             <div className="hidden md:flex items-center space-x-10">
               <a href="#features" className="text-slate-100 hover:text-cyan-300 transition-all duration-300 font-medium text-lg focus-ring relative group py-2">
@@ -293,9 +295,11 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex items-center space-x-2 mb-6 md:mb-0">
-              <div className="text-white font-bold text-xl tracking-wide hover:text-cyan-300 transition-colors duration-300 cursor-pointer">
-                WeAreWay
-              </div>
+              <img 
+                src="/lovable-uploads/d4e80738-4d68-49ef-a793-1aea5f718e28.png" 
+                alt="WeAreWay" 
+                className="h-14 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-80 hover:opacity-100"
+              />
             </div>
             <div className="flex items-center space-x-8 text-slate-300">
               <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
