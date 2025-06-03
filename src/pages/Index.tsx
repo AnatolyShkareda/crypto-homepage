@@ -1,5 +1,3 @@
-
-
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
@@ -330,4 +328,3 @@ const Index = () => {
 };
 
 export default Index;
-
