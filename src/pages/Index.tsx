@@ -1,3 +1,4 @@
+
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
@@ -86,7 +87,7 @@ const Index = () => {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
               <img 
-                src="/lovable-uploads/d4e80738-4d68-49ef-a793-1aea5f718e28.png" 
+                src="/lovable-uploads/5c2c262a-9b93-48b2-8580-6f01b4308c09.png" 
                 alt="WeAreWay" 
                 className="h-16 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-90 hover:opacity-100"
               />
@@ -296,7 +297,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex items-center space-x-2 mb-6 md:mb-0">
               <img 
-                src="/lovable-uploads/d4e80738-4d68-49ef-a793-1aea5f718e28.png" 
+                src="/lovable-uploads/5c2c262a-9b93-48b2-8580-6f01b4308c09.png" 
                 alt="WeAreWay" 
                 className="h-14 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-80 hover:opacity-100"
               />
