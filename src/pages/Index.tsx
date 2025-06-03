@@ -116,24 +116,6 @@ const Index = () => {
           }} />)}
           </div>
 
-          {/* Cityscape Buildings */}
-          <div className="absolute bottom-0 left-0 right-0 cityscape">
-            {/* Background Buildings */}
-            <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-t from-purple-900/60 to-transparent transform -skew-x-1"></div>
-            <div className="absolute bottom-0 right-0 w-full h-80 bg-gradient-to-t from-purple-800/50 to-transparent transform skew-x-1"></div>
-            
-            {/* Main Tower */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-96 bg-gradient-to-t from-purple-600 via-purple-500 to-purple-400 cyber-tower">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-20 bg-cyan-400 animate-pulse"></div>
-            </div>
-            
-            {/* Side Buildings */}
-            <div className="absolute bottom-0 left-1/4 w-12 h-64 bg-gradient-to-t from-purple-700 to-purple-600 transform -skew-y-1"></div>
-            <div className="absolute bottom-0 right-1/4 w-10 h-72 bg-gradient-to-t from-purple-800 to-purple-700 transform skew-y-1"></div>
-            <div className="absolute bottom-0 left-1/6 w-8 h-48 bg-gradient-to-t from-purple-900 to-purple-800"></div>
-            <div className="absolute bottom-0 right-1/6 w-14 h-56 bg-gradient-to-t from-purple-700 to-purple-600"></div>
-          </div>
-
           {/* Floating Cyber Elements */}
           <div className="absolute top-20 left-10 w-20 h-20 border-2 border-cyan-400 rounded-full animate-spin-slow opacity-30">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-cyan-400 rounded-full animate-pulse"></div>
