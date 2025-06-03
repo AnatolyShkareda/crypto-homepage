@@ -85,11 +85,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/34fb2bfb-ee4f-4206-88a1-ea5b346224c7.png" 
-                alt="WeAreWay" 
-                className="h-10 transition-transform hover:scale-105 filter drop-shadow-lg"
-              />
+              <div className="text-white font-bold text-xl tracking-wide hover:text-cyan-300 transition-colors duration-300 cursor-pointer">
+                WeAreWay
+              </div>
             </div>
             <div className="hidden md:flex items-center space-x-10">
               <a href="#features" className="text-slate-100 hover:text-cyan-300 transition-all duration-300 font-medium text-lg focus-ring relative group py-2">
@@ -194,7 +192,7 @@ const Index = () => {
               </p>
             </div>
             <div className="flex justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold text-xl px-12 py-6 shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 border-2 border-cyan-400/50 hover:border-cyan-300 group">
+              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold text-xl px-12 py-6 shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 border-2 border-cyan-400/50 hover:border-cyan-300 hover:scale-105">
                 <span className="relative z-10">Book a call</span>
                 <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-500/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -295,11 +293,9 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex items-center space-x-2 mb-6 md:mb-0">
-              <img 
-                src="/lovable-uploads/34fb2bfb-ee4f-4206-88a1-ea5b346224c7.png" 
-                alt="WeAreWay" 
-                className="h-10 transition-transform hover:scale-105 filter drop-shadow-lg"
-              />
+              <div className="text-white font-bold text-xl tracking-wide hover:text-cyan-300 transition-colors duration-300 cursor-pointer">
+                WeAreWay
+              </div>
             </div>
             <div className="flex items-center space-x-8 text-slate-300">
               <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
