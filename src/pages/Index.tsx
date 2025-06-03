@@ -234,23 +234,28 @@ const Index = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-start mb-8">
             <div className="flex items-center space-x-2 mb-6 md:mb-0">
               <img src="/lovable-uploads/5c2c262a-9b93-48b2-8580-6f01b4308c09.png" alt="WeAreWay" className="h-14 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-80 hover:opacity-100" />
             </div>
-            <div className="flex items-center space-x-8 text-slate-300">
-              <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
-                <span className="relative z-10">Privacy Policy</span>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
-              </a>
-              <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
-                <span className="relative z-10">Terms of Service</span>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
-              </a>
-              <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
-                <span className="relative z-10">Support</span>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
-              </a>
+            <div className="flex flex-col space-y-4 text-slate-300 max-w-md">
+              <div className="flex items-center space-x-8">
+                <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
+                  <span className="relative z-10">Privacy Policy</span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
+                </a>
+                <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
+                  <span className="relative z-10">Terms of Service</span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
+                </a>
+                <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
+                  <span className="relative z-10">Support</span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full shadow-lg shadow-cyan-400/50"></span>
+                </a>
+              </div>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                We develop blockchain software and do not provide financial services. Our activities do not require licensing in Israel. Full terms are available on the following page:
+              </p>
             </div>
           </div>
           <div className="border-t border-cyan-500/20 pt-8 text-center">
