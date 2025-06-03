@@ -1,4 +1,5 @@
 
+
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
@@ -178,13 +179,13 @@ const Index = () => {
           <div className="text-center max-w-6xl mx-auto">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
               <span className="block mb-2">We build decentralized platforms</span>
-              <span className="block mb-2">at the{" "}
+              <span className="block mb-2">where{" "}
                 <span className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent font-extrabold">
-                  intersection
+                  blockchain
                 </span>
               </span>
               <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 text-slate-200">
-                of blockchain and artificial intelligence
+                and artificial intelligence converge
               </span>
             </h1>
             <div className="max-w-4xl mx-auto mb-12">
@@ -329,3 +330,4 @@ const Index = () => {
 };
 
 export default Index;
+
