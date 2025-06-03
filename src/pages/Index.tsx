@@ -157,8 +157,7 @@ const Index = () => {
             </h1>
             <div className="max-w-4xl mx-auto mb-12">
               <p className="text-xl md:text-2xl lg:text-3xl text-slate-200 leading-relaxed font-light tracking-wide">
-                <span className="text-cyan-300 font-medium">We build decentralized platforms where blockchain and artificial intelligence converge</span>{" "}
-                of decentralized intelligence.
+                <span className="text-cyan-300 font-medium">We build decentralized platforms where blockchain and artificial intelligence converge</span>
               </p>
             </div>
             <div className="flex justify-center">
