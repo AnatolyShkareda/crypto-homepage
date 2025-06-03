@@ -2,94 +2,75 @@ import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
 import { useEffect, useRef } from "react";
-
 const Index = () => {
   const heroRef = useRef<HTMLElement>(null);
   const featuresRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLElement>(null);
   const footerRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in');
         }
       });
     }, observerOptions);
-
     const elements = [heroRef.current, featuresRef.current, ctaRef.current, footerRef.current];
-    elements.forEach((el) => {
+    elements.forEach(el => {
       if (el) {
         observer.observe(el);
       }
     });
-
     return () => observer.disconnect();
   }, []);
-
-  const features = [
-    {
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=64&h=64&fit=crop&crop=center",
-      title: "Train AI Models. Share Compute. Earn.",
-      subtitle: "Decentralized AI Training Platforms",
-      description: "Contribute data or GPU power to train AI collaboratively. Get rewarded in tokens — no central authority, just global intelligence.",
-      gradient: "from-cyan-400 to-purple-500"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=64&h=64&fit=crop&crop=center",
-      title: "Monetize Your Data. Fuel Smarter AI.",
-      subtitle: "Decentralized Data Marketplaces",
-      description: "Control your data. Sell it securely to AI developers and companies, ensuring privacy and fair compensation.",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=64&h=64&fit=crop&crop=center",
-      title: "Create. Mint. Trade.",
-      subtitle: "AI-Generated NFTs",
-      description: "Turn AI-generated art, music, or characters into NFTs in seconds. Tokenize creativity and build interactive, intelligent collectibles.",
-      gradient: "from-pink-500 to-cyan-400"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=64&h=64&fit=crop&crop=center",
-      title: "Compliant by Design",
-      subtitle: "AI-Powered KYC on Blockchain",
-      description: "Automated identity verification with on-chain audit logs. Built for DeFi, exchanges, and Web3 platforms needing scalable, regulatory-grade KYC.",
-      gradient: "from-cyan-400 to-purple-500"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=64&h=64&fit=crop&crop=center",
-      title: "Web3 Access to Language Models",
-      subtitle: "Decentralized LLM Services",
-      description: "Tap into powerful LLMs without registration. Integrate via API, pay in ETH or USDC, and launch custom AI agents directly on-chain.",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=64&h=64&fit=crop&crop=center",
-      title: "Intelligent Agents for the Autonomous Web",
-      subtitle: "AI Agents in Web3 Ecosystems",
-      description: "Deploy bots that trade, govern, and interact autonomously with smart contracts and DAOs — redefining on-chain automation.",
-      gradient: "from-pink-500 to-cyan-400"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  const features = [{
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=64&h=64&fit=crop&crop=center",
+    title: "Train AI Models. Share Compute. Earn.",
+    subtitle: "Decentralized AI Training Platforms",
+    description: "Contribute data or GPU power to train AI collaboratively. Get rewarded in tokens — no central authority, just global intelligence.",
+    gradient: "from-cyan-400 to-purple-500"
+  }, {
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=64&h=64&fit=crop&crop=center",
+    title: "Monetize Your Data. Fuel Smarter AI.",
+    subtitle: "Decentralized Data Marketplaces",
+    description: "Control your data. Sell it securely to AI developers and companies, ensuring privacy and fair compensation.",
+    gradient: "from-purple-500 to-pink-500"
+  }, {
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=64&h=64&fit=crop&crop=center",
+    title: "Create. Mint. Trade.",
+    subtitle: "AI-Generated NFTs",
+    description: "Turn AI-generated art, music, or characters into NFTs in seconds. Tokenize creativity and build interactive, intelligent collectibles.",
+    gradient: "from-pink-500 to-cyan-400"
+  }, {
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=64&h=64&fit=crop&crop=center",
+    title: "Compliant by Design",
+    subtitle: "AI-Powered KYC on Blockchain",
+    description: "Automated identity verification with on-chain audit logs. Built for DeFi, exchanges, and Web3 platforms needing scalable, regulatory-grade KYC.",
+    gradient: "from-cyan-400 to-purple-500"
+  }, {
+    image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=64&h=64&fit=crop&crop=center",
+    title: "Web3 Access to Language Models",
+    subtitle: "Decentralized LLM Services",
+    description: "Tap into powerful LLMs without registration. Integrate via API, pay in ETH or USDC, and launch custom AI agents directly on-chain.",
+    gradient: "from-purple-500 to-pink-500"
+  }, {
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=64&h=64&fit=crop&crop=center",
+    title: "Intelligent Agents for the Autonomous Web",
+    subtitle: "AI Agents in Web3 Ecosystems",
+    description: "Deploy bots that trade, govern, and interact autonomously with smart contracts and DAOs — redefining on-chain automation.",
+    gradient: "from-pink-500 to-cyan-400"
+  }];
+  return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
       <nav className="border-b border-cyan-500/20 bg-slate-900/90 backdrop-blur-xl sticky top-0 z-50 shadow-2xl shadow-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/5c2c262a-9b93-48b2-8580-6f01b4308c09.png" 
-                alt="WeAreWay" 
-                className="h-16 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-90 hover:opacity-100"
-              />
+              <img src="/lovable-uploads/5c2c262a-9b93-48b2-8580-6f01b4308c09.png" alt="WeAreWay" className="h-16 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-90 hover:opacity-100" />
             </div>
             <div className="hidden md:flex items-center space-x-10">
               <a href="#features" className="text-slate-100 hover:text-cyan-300 transition-all duration-300 font-medium text-lg focus-ring relative group py-2">
@@ -122,26 +103,17 @@ const Index = () => {
       </nav>
 
       {/* Hero Section with Animated Cityscape Background */}
-      <section 
-        ref={heroRef}
-        className="section-animate relative overflow-hidden min-h-[90vh] flex items-center cyber-cityscape"
-      >
+      <section ref={heroRef} className="section-animate relative overflow-hidden min-h-[90vh] flex items-center cyber-cityscape">
         {/* Animated Cityscape Background */}
         <div className="absolute inset-0 cyber-bg">
           {/* Starfield */}
           <div className="absolute inset-0">
-            {[...Array(50)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${2 + Math.random() * 2}s`
-                }}
-              />
-            ))}
+            {[...Array(50)].map((_, i) => <div key={i} className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 3}s`,
+            animationDuration: `${2 + Math.random() * 2}s`
+          }} />)}
           </div>
 
           {/* Cityscape Buildings */}
@@ -166,7 +138,9 @@ const Index = () => {
           <div className="absolute top-20 left-10 w-20 h-20 border-2 border-cyan-400 rounded-full animate-spin-slow opacity-30">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-cyan-400 rounded-full animate-pulse"></div>
           </div>
-          <div className="absolute top-40 right-20 w-16 h-16 border border-purple-400 rounded-full animate-bounce opacity-40" style={{ animationDuration: '3s' }}></div>
+          <div className="absolute top-40 right-20 w-16 h-16 border border-purple-400 rounded-full animate-bounce opacity-40" style={{
+          animationDuration: '3s'
+        }}></div>
           <div className="absolute bottom-20 left-20 w-24 h-24 border-2 border-pink-500 rounded-full animate-pulse opacity-25"></div>
 
           {/* Grid Lines */}
@@ -189,7 +163,7 @@ const Index = () => {
             <div className="max-w-4xl mx-auto mb-12">
               <p className="text-xl md:text-2xl lg:text-3xl text-slate-200 leading-relaxed font-light tracking-wide">
                 AI that works for Web3.{" "}
-                <span className="text-cyan-300 font-medium">Building the future</span>{" "}
+                <span className="text-cyan-300 font-medium">We build decentralized platforms where blockchain and artificial intelligence converge</span>{" "}
                 of decentralized intelligence.
               </p>
             </div>
@@ -205,18 +179,16 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section 
-        id="features" 
-        ref={featuresRef}
-        className="section-animate py-24 lg:py-40 bg-gradient-to-br from-slate-900 via-purple-900/60 to-slate-900 relative overflow-hidden"
-      >
+      <section id="features" ref={featuresRef} className="section-animate py-24 lg:py-40 bg-gradient-to-br from-slate-900 via-purple-900/60 to-slate-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-purple-900/20 to-transparent"></div>
           <div className="absolute inset-0 cyber-grid opacity-20"></div>
           {/* Floating Elements */}
           <div className="absolute top-20 right-10 w-32 h-32 border border-cyan-400/30 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-40 left-10 w-24 h-24 border border-pink-500/30 rounded-full animate-bounce" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute bottom-40 left-10 w-24 h-24 border border-pink-500/30 rounded-full animate-bounce" style={{
+          animationDuration: '4s'
+        }}></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
@@ -243,10 +215,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section 
-        ref={ctaRef}
-        className="section-animate py-24 lg:py-40 bg-gradient-to-r from-purple-900 via-slate-900 to-purple-900 relative overflow-hidden"
-      >
+      <section ref={ctaRef} className="section-animate py-24 lg:py-40 bg-gradient-to-r from-purple-900 via-slate-900 to-purple-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 cyber-grid opacity-30"></div>
@@ -282,10 +251,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer 
-        ref={footerRef}
-        className="section-animate bg-gradient-to-br from-slate-900 via-purple-900/40 to-slate-900 py-20 border-t border-cyan-500/20 relative overflow-hidden"
-      >
+      <footer ref={footerRef} className="section-animate bg-gradient-to-br from-slate-900 via-purple-900/40 to-slate-900 py-20 border-t border-cyan-500/20 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 cyber-grid opacity-10"></div>
@@ -295,11 +261,7 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex items-center space-x-2 mb-6 md:mb-0">
-              <img 
-                src="/lovable-uploads/5c2c262a-9b93-48b2-8580-6f01b4308c09.png" 
-                alt="WeAreWay" 
-                className="h-14 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-80 hover:opacity-100"
-              />
+              <img src="/lovable-uploads/5c2c262a-9b93-48b2-8580-6f01b4308c09.png" alt="WeAreWay" className="h-14 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-80 hover:opacity-100" />
             </div>
             <div className="flex items-center space-x-8 text-slate-300">
               <a href="#" className="hover:text-cyan-300 transition-all duration-300 font-medium relative group py-2">
@@ -323,8 +285,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
