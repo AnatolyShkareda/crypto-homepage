@@ -117,26 +117,26 @@ const Index = () => {
         <div className="absolute inset-0">
           {/* Starfield */}
           <div className="absolute inset-0">
-            {[...Array(50)].map((_, i) => (
+            {[...Array(25)].map((_, i) => (
               <div 
                 key={i} 
-                className="absolute w-1 h-1 bg-blue-400 rounded-full animate-pulse" 
+                className="absolute w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse opacity-30" 
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${2 + Math.random() * 2}s`
+                  animationDelay: `${Math.random() * 5}s`,
+                  animationDuration: `${3 + Math.random() * 3}s`
                 }} 
               />
             ))}
           </div>
 
           {/* Floating Elements */}
-          <div className="absolute top-20 left-10 w-20 h-20 border-2 border-blue-300 rounded-full animate-spin-slow opacity-30">
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-blue-300 rounded-full animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-16 h-16 border border-blue-200 rounded-full opacity-20" style={{ animation: 'spin 20s linear infinite' }}>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-200 rounded-full animate-pulse opacity-40"></div>
           </div>
-          <div className="absolute top-40 right-20 w-16 h-16 border border-cyan-400 rounded-full animate-bounce opacity-40" style={{ animationDuration: '3s' }}></div>
-          <div className="absolute bottom-20 left-20 w-24 h-24 border-2 border-blue-400 rounded-full animate-pulse opacity-25"></div>
+          <div className="absolute top-40 right-20 w-12 h-12 border border-cyan-300 rounded-full opacity-30" style={{ animation: 'bounce 4s ease-in-out infinite' }}></div>
+          <div className="absolute bottom-20 left-20 w-20 h-20 border border-blue-300 rounded-full animate-pulse opacity-20"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-10">
