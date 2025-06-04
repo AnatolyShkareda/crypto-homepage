@@ -259,7 +259,7 @@ const Index = () => {
                 <div className="text-sm leading-relaxed">
                   <p>Amot Atrium Tower</p>
                   <p>2 Jabotinsky Street</p>
-                  <p>Ramat Gan, Tel Aviv District, 5250501</p>
+                  <p>Ramat Gan, Tel Aviv District</p>
                   <p>Israel</p>
                 </div>
                 <div className="pt-2">
