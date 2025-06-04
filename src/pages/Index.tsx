@@ -71,7 +71,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-2">
-              <img src="/lovable-uploads/e6087e91-4fb2-4d1f-a59e-16d6c44aea0d.png" alt="WeAreWay" className="h-16 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-90 hover:opacity-100" />
+              <img src="/lovable-uploads/bf1418db-f8a9-4b0a-8136-7bf17e5dbd45.png" alt="WeAreWay" className="h-16 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-90 hover:opacity-100" />
             </div>
             <div className="hidden md:flex items-center space-x-10">
               <a href="#features" className="text-slate-700 hover:text-blue-600 transition-all duration-300 font-medium text-lg focus-ring relative group py-2">
@@ -244,7 +244,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
             {/* Company Logo */}
             <div className="flex flex-col items-center lg:items-start">
-              <img src="/lovable-uploads/e6087e91-4fb2-4d1f-a59e-16d6c44aea0d.png" alt="WeAreWay" className="h-14 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-80 hover:opacity-100 mb-4" />
+              <img src="/lovable-uploads/bf1418db-f8a9-4b0a-8136-7bf17e5dbd45.png" alt="WeAreWay" className="h-14 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-80 hover:opacity-100 mb-4" />
               <p className="text-slate-600 text-center lg:text-left text-sm leading-relaxed max-w-xs">
                 Building the future of decentralized artificial intelligence.
               </p>
