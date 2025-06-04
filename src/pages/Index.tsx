@@ -1,3 +1,4 @@
+
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
@@ -249,34 +250,66 @@ const Index = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="flex flex-col md:flex-row justify-between items-start mb-8">
-            <div className="flex items-center space-x-2 mb-6 md:mb-0">
-              <img src="/lovable-uploads/e6087e91-4fb2-4d1f-a59e-16d6c44aea0d.png" alt="WeAreWay" className="h-14 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-80 hover:opacity-100" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
+            {/* Company Logo */}
+            <div className="flex flex-col items-center lg:items-start">
+              <img src="/lovable-uploads/e6087e91-4fb2-4d1f-a59e-16d6c44aea0d.png" alt="WeAreWay" className="h-14 w-auto transition-transform hover:scale-105 filter drop-shadow-lg opacity-80 hover:opacity-100 mb-4" />
+              <p className="text-slate-600 text-center lg:text-left text-sm leading-relaxed max-w-xs">
+                Building the future of decentralized artificial intelligence.
+              </p>
             </div>
-            <div className="flex flex-col space-y-4 text-slate-600 max-w-md">
-              <div className="flex items-center space-x-8">
-                <a href="#" className="hover:text-blue-600 transition-all duration-300 font-medium relative group py-2">
+
+            {/* Company Information */}
+            <div className="text-center lg:text-left">
+              <h3 className="text-lg font-semibold text-slate-800 mb-4">Company Information</h3>
+              <div className="space-y-2 text-slate-600">
+                <p className="font-medium">WEAREWAY.CO LTD</p>
+                <div className="text-sm leading-relaxed">
+                  <p>Amot Atrium Tower</p>
+                  <p>2 Jabotinsky Street</p>
+                  <p>Ramat Gan, Tel Aviv District, 5250501</p>
+                  <p>Israel</p>
+                </div>
+                <div className="pt-2">
+                  <a href="mailto:info@weareway.co" className="text-blue-600 hover:text-blue-700 transition-colors duration-300 font-medium">
+                    info@weareway.co
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="text-center lg:text-left">
+              <h3 className="text-lg font-semibold text-slate-800 mb-4">Quick Links</h3>
+              <div className="flex flex-col space-y-3">
+                <a href="#" className="text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium relative group py-1 inline-block">
                   <span className="relative z-10">Privacy Policy</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 transition-all duration-300 group-hover:w-full shadow-lg shadow-blue-600/50"></span>
                 </a>
-                <a href="#" className="hover:text-blue-600 transition-all duration-300 font-medium relative group py-2">
+                <a href="#" className="text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium relative group py-1 inline-block">
                   <span className="relative z-10">Terms of Service</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 transition-all duration-300 group-hover:w-full shadow-lg shadow-blue-600/50"></span>
                 </a>
-                <a href="#" className="hover:text-blue-600 transition-all duration-300 font-medium relative group py-2">
+                <a href="#" className="text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium relative group py-1 inline-block">
                   <span className="relative z-10">Support</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 transition-all duration-300 group-hover:w-full shadow-lg shadow-blue-600/50"></span>
                 </a>
               </div>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                We develop blockchain software and do not provide financial services. Our activities do not require licensing in Israel. Full terms are available on the following page:
-              </p>
             </div>
           </div>
-          <div className="border-t border-blue-200/20 pt-8 text-center">
-            <p className="text-slate-500 font-light leading-relaxed text-lg tracking-wide">
-              &copy; 2024 WeAreWay. Building the future of decentralized artificial intelligence.
-            </p>
+
+          {/* Legal Disclaimer */}
+          <div className="border-t border-blue-200/20 pt-8">
+            <div className="text-center mb-6">
+              <p className="text-sm text-slate-500 leading-relaxed max-w-4xl mx-auto">
+                We develop blockchain software and do not provide financial services. Our activities do not require licensing in Israel. Full terms are available on the following page.
+              </p>
+            </div>
+            <div className="text-center">
+              <p className="text-slate-500 font-light leading-relaxed text-lg tracking-wide">
+                &copy; 2024 WeAreWay. Building the future of decentralized artificial intelligence.
+              </p>
+            </div>
           </div>
         </div>
       </footer>
