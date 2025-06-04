@@ -1,22 +1,18 @@
-
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
 import ContactForm from "@/components/ContactForm";
 import { useEffect, useRef } from "react";
-
 const Index = () => {
   const heroRef = useRef<HTMLElement>(null);
   const featuresRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLElement>(null);
   const footerRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
-
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -24,17 +20,14 @@ const Index = () => {
         }
       });
     }, observerOptions);
-
     const elements = [heroRef.current, featuresRef.current, ctaRef.current, footerRef.current];
     elements.forEach(el => {
       if (el) {
         observer.observe(el);
       }
     });
-
     return () => observer.disconnect();
   }, []);
-
   const features = [{
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=64&h=64&fit=crop&crop=center",
     title: "Train AI Models. Share Compute. Earn.",
@@ -72,9 +65,7 @@ const Index = () => {
     description: "Deploy bots that trade, govern, and interact autonomously with smart contracts and DAOs — redefining on-chain automation.",
     gradient: "from-cyan-500 to-blue-500"
   }];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-white">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-white">
       {/* Navigation */}
       <nav className="border-b border-blue-200/30 bg-white/90 backdrop-blur-xl sticky top-0 z-50 shadow-lg shadow-blue-500/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,25 +109,23 @@ const Index = () => {
         <div className="absolute inset-0">
           {/* Starfield */}
           <div className="absolute inset-0">
-            {[...Array(25)].map((_, i) => (
-              <div 
-                key={i} 
-                className="absolute w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse opacity-30" 
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 5}s`,
-                  animationDuration: `${3 + Math.random() * 3}s`
-                }} 
-              />
-            ))}
+            {[...Array(25)].map((_, i) => <div key={i} className="absolute w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse opacity-30" style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 5}s`,
+            animationDuration: `${3 + Math.random() * 3}s`
+          }} />)}
           </div>
 
           {/* Floating Elements */}
-          <div className="absolute top-20 left-10 w-16 h-16 border border-blue-200 rounded-full opacity-20" style={{ animation: 'spin 20s linear infinite' }}>
+          <div className="absolute top-20 left-10 w-16 h-16 border border-blue-200 rounded-full opacity-20" style={{
+          animation: 'spin 20s linear infinite'
+        }}>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-200 rounded-full animate-pulse opacity-40"></div>
           </div>
-          <div className="absolute top-40 right-20 w-12 h-12 border border-cyan-300 rounded-full opacity-30" style={{ animation: 'bounce 4s ease-in-out infinite' }}></div>
+          <div className="absolute top-40 right-20 w-12 h-12 border border-cyan-300 rounded-full opacity-30" style={{
+          animation: 'bounce 4s ease-in-out infinite'
+        }}></div>
           <div className="absolute bottom-20 left-20 w-20 h-20 border border-blue-300 rounded-full animate-pulse opacity-20"></div>
         </div>
         
@@ -171,7 +160,9 @@ const Index = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-50/20 to-transparent"></div>
           {/* Floating Elements */}
           <div className="absolute top-20 right-10 w-32 h-32 border border-blue-300/30 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-40 left-10 w-24 h-24 border border-cyan-400/30 rounded-full animate-bounce" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute bottom-40 left-10 w-24 h-24 border border-cyan-400/30 rounded-full animate-bounce" style={{
+          animationDuration: '4s'
+        }}></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
@@ -291,7 +282,7 @@ const Index = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 transition-all duration-300 group-hover:w-full shadow-lg shadow-blue-600/50"></span>
                 </a>
                 <a href="#" className="text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium relative group py-1 inline-block">
-                  <span className="relative z-10">Support</span>
+                  <span className="relative z-10"></span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 transition-all duration-300 group-hover:w-full shadow-lg shadow-blue-600/50"></span>
                 </a>
               </div>
@@ -313,8 +304,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
