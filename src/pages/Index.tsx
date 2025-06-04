@@ -171,10 +171,10 @@ const Index = () => {
               <span className="bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent">
                 Decentralized AI
               </span>
-              <span className="block text-slate-700 mt-2">Solutions</span>
+              <span className="block text-slate-700 mt-2 font-normal text-6xl">Solutions</span>
             </h2>
             <div className="max-w-4xl mx-auto">
-              <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-light tracking-wide">
+              <p className="text-xl text-slate-600 leading-relaxed font-light tracking-wide md:text-3xl">
                 Revolutionary products that merge{" "}
                 <span className="text-blue-600 font-medium">artificial intelligence</span>{" "}
                 with{" "}
