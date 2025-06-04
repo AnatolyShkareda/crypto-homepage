@@ -1,7 +1,7 @@
-
 import { ArrowRight, Brain, ExternalLink, Users, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeatureCarousel from "@/components/FeatureCarousel";
+import ContactForm from "@/components/ContactForm";
 import { useEffect, useRef } from "react";
 
 const Index = () => {
@@ -204,27 +204,39 @@ const Index = () => {
           <div className="absolute bottom-10 right-1/4 w-32 h-32 border border-cyan-400/20 rounded-full animate-pulse"></div>
         </div>
 
-        <div className="relative max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8 z-10">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-800 mb-10 tracking-tight leading-tight">
-            <span className="block mb-2">Ready to Build</span>
-            <span className="bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent">
-              the Future?
-            </span>
-          </h2>
-          <div className="max-w-4xl mx-auto mb-16">
-            <p className="text-xl md:text-2xl lg:text-3xl text-slate-600 leading-relaxed font-light tracking-wide">
-              Join the community shaping the{" "}
-              <span className="text-blue-600 font-medium">next wave</span>{" "}
-              of decentralized AI.{" "}
-              <span className="text-cyan-600 font-medium">Start building today.</span>
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white text-xl px-12 py-6 font-bold shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 border-2 border-blue-400/50 hover:border-blue-300 group">
-              <span className="relative z-10">Book a free consultation</span>
-              <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-500/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Button>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left side - CTA content */}
+            <div className="text-center lg:text-left">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-800 mb-10 tracking-tight leading-tight">
+                <span className="block mb-2">Ready to Build</span>
+                <span className="bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent">
+                  the Future?
+                </span>
+              </h2>
+              <div className="max-w-2xl mb-16">
+                <p className="text-xl md:text-2xl lg:text-3xl text-slate-600 leading-relaxed font-light tracking-wide">
+                  Join the community shaping the{" "}
+                  <span className="text-blue-600 font-medium">next wave</span>{" "}
+                  of decentralized AI.{" "}
+                  <span className="text-cyan-600 font-medium">Start building today.</span>
+                </p>
+              </div>
+              <div className="flex justify-center lg:justify-start">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white text-xl px-12 py-6 font-bold shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 border-2 border-blue-400/50 hover:border-blue-300 group">
+                  <span className="relative z-10">Book a free consultation</span>
+                  <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-500/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right side - Contact form */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="w-full max-w-lg">
+                <ContactForm />
+              </div>
+            </div>
           </div>
         </div>
       </section>
