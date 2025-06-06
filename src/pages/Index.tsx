@@ -299,7 +299,7 @@ const Index = () => {
             </div>
             <div className="text-center">
               <p className="text-slate-500 font-light leading-relaxed text-lg tracking-wide">
-                &copy; 2024 WeAreWay. Building the future of decentralized artificial intelligence.
+                &copy; 2025 WeAreWay. Building the future of decentralized artificial intelligence.
               </p>
             </div>
           </div>
